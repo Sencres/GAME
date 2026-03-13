@@ -1,8 +1,17 @@
 [gd_scene format=3 uid="uid://bns8jmihfdx0m"]
 
 [ext_resource type="ArrayMesh" uid="uid://bvr4u04qxuts7" path="res://models/room.obj" id="1_0xm2m"]
+[ext_resource type="Texture2D" uid="uid://d2xnm8c2h7qp" path="res://textures/yellowwallpaper.png" id="2_1bvp3"]
 [ext_resource type="PackedScene" uid="uid://dvi62cts411t5" path="res://player.tscn" id="2_h2yge"]
 [ext_resource type="VoxelGIData" uid="uid://csc2dw8owdxsp" path="res://main.VoxelGI_data.res" id="3_h2yge"]
+[ext_resource type="Texture2D" uid="uid://j31ud4epxh3y" path="res://textures/yellowwallpaper_normal.png" id="3_lquwl"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_lquwl"]
+albedo_texture = ExtResource("2_1bvp3")
+normal_enabled = true
+normal_texture = ExtResource("3_lquwl")
+uv1_scale = Vector3(3.5, 3.5, 3.5)
+uv1_offset = Vector3(1, 0, 0)
 
 [sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_1bvp3"]
 data = PackedVector3Array(4, 5, 4, 4, 5, -4, -4, 5, 4, -4, 5, 4, 4, 5, -4, -4, 5, -4, -4, 0, 4, 4, 0, 4, -4, 5, 4, -4, 5, 4, 4, 0, 4, 4, 5, 4, -4, 0, -4, -4, 0, 4, -4, 5, -4, -4, 5, -4, -4, 0, 4, -4, 5, 4, -4, 0, 4, -4, 0, -4, 4, 0, 4, 4, 0, 4, -4, 0, -4, 4, 0, -4, 4, 0, 4, 4, 0, -4, 4, 5, 4, 4, 5, 4, 4, 0, -4, 4, 5, -4, 4, 0, -4, -4, 0, -4, 4, 5, -4, 4, 5, -4, -4, 0, -4, -4, 5, -4)
@@ -11,6 +20,7 @@ data = PackedVector3Array(4, 5, 4, 4, 5, -4, -4, 5, 4, -4, 5, 4, 4, 5, -4, -4, 5
 
 [node name="Room" type="MeshInstance3D" parent="." unique_id=388531807]
 mesh = ExtResource("1_0xm2m")
+surface_material_override/0 = SubResource("StandardMaterial3D_lquwl")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Room" unique_id=681217991]
 
