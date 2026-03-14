@@ -1,0 +1,43 @@
+[gd_scene format=3 uid="uid://bei236srh4a1"]
+
+[ext_resource type="Script" uid="uid://dchtf1uu4vns3" path="res://scripts/money.gd" id="1_v42d4"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_dia0j"]
+font_size = 32
+font_color = Color(0, 1, 0, 1)
+
+[node name="Money" type="Control" unique_id=1955029414]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_v42d4")
+
+[node name="Label" type="Label" parent="." unique_id=329489236]
+layout_mode = 1
+anchors_preset = -1
+offset_right = 165.0
+offset_bottom = 45.0
+text = "$0"
+label_settings = SubResource("LabelSettings_dia0j")
+
+[node name="addMoneyButton" type="Button" parent="." unique_id=908832990]
+layout_mode = 0
+offset_left = 28.0
+offset_top = 64.0
+offset_right = 158.0
+offset_bottom = 100.0
+text = "Add money"
+
+[node name="removeMoneyButton" type="Button" parent="." unique_id=735437945]
+layout_mode = 0
+offset_left = 29.0
+offset_top = 114.0
+offset_right = 135.0
+offset_bottom = 150.0
+text = "Remove money"
+
+[connection signal="pressed" from="addMoneyButton" to="." method="_on_add_money_button_pressed"]
+[connection signal="pressed" from="removeMoneyButton" to="." method="_on_remove_money_button_pressed"]

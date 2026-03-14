@@ -5,6 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://j31ud4epxh3y" path="res://textures/yellowwallpaper_normal.png" id="3_o6xl0"]
 [ext_resource type="PackedScene" uid="uid://dvi62cts411t5" path="res://scenes/player.tscn" id="4_tipki"]
 [ext_resource type="VoxelGIData" uid="uid://csc2dw8owdxsp" path="res://scenes/main.VoxelGI_data.res" id="5_85g3d"]
+[ext_resource type="PackedScene" uid="uid://bei236srh4a1" path="res://scenes/money.tscn" id="6_tefeu"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_lquwl"]
 albedo_texture = ExtResource("2_tefeu")
@@ -38,3 +39,5 @@ omni_range = 5.349433
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.032806396, 2.5528417, -0.057769775)
 size = Vector3(9.698181, 6.548401, 9.822815)
 data = ExtResource("5_85g3d")
+
+[node name="Money" parent="." unique_id=1955029414 instance=ExtResource("6_tefeu")]
